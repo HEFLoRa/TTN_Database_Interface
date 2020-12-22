@@ -1,0 +1,1 @@
+{"Application ID": "hef_tum_ttn_app_10", "Device ID": "hef_tum_ttn_device_14", "AppEUI": "70B3D57ED0038498", "DevEUI": "00882D73A145B38E", "AppKey": "2B33CD1B4891E924ED4DAC39EDE81518", "payload_function_type": "decoder", "payload_function_file": "ttn_payload_function.js", "Access Key": "ttn-account-v2.kLowdGk0phmtwDSyfSdF33fG_nUFjGivRcc67xt4-_o"}
