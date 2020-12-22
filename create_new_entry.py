@@ -10,10 +10,17 @@ os.system('python3 configs/scenarios/get_input.py')
 input = open("configs/scenarios/input_ttn.json")
 input_data = json.load(input)
 
-cur.execute("INSERT INTO thing VALUES(%s, 'test', 'test', 10, null, 10, true);" % (str(id)))
+# Writes input in thing table
+cur.execute("INSERT INTO thing VALUES(%s, 'fake_user_%s', 'fake_client', 00, null, null, true);" % (str(id), str(id)))
+
+# TODO check for ttn -> source_ttn / source_third_party
+
+# Writes input in source_ttn table
+cur.execute("INSERT INTO source_ttn VALUES(%s, '%s', '%s', '%s', 'fake_address', null);" % (str(id), input_data["Application ID"], input_data["Access Key"], input_data["Device ID"]))
+
 conn.commit()
 
-cur.execute("SELECT * FROM thing")
+cur.execute("SELECT * FROM source_ttn")
 result = cur.fetchall()
 
 cur.close()
