@@ -20,7 +20,7 @@ id = cur.fetchall()
 # TODO check for ttn -> source_ttn / source_third_party
 
 # Writes input in source_ttn table
-cur.execute("INSERT INTO source_ttn VALUES(%s, '%s', '%s', '%s', 'fake_address', null);" % (str(id[0][0]), input_data["Application ID"], input_data["Device ID"], input_data["Access Key"]))
+cur.execute("INSERT INTO source_ttn VALUES(%s, '%s', '%s', '%s', 'fake_address', null, '%s', '%s', 'localhost');" % (str(id[0][0]), input_data["Application ID"], input_data["Device ID"], input_data["Access Key"], input_data["DevEUI"], input_data["AppEUI"]))
 
 conn.commit()
 cur.close()
